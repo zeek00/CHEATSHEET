@@ -5,8 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS BOX MODEL REFERENCE</title>
+    <link rel="stylesheet" href="stylesheet/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <nav>
+        <header>
+            <h1>CSS BOX MODEL REFERENCE</h1>
+        </header>
+    </nav>
+
+    <main>
+        <article>
+            <p>In CSS, the term "box model" is used in relation to design and layout.</p>
+            <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:</p>
+            
+            <table class="table one">
+                <thead>
+                    <tr>
+                        <th>Parts</th>
+                        <th>Description</th>
+                    </tr>                 
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Content</td>
+                        <td>The content of the box, where text and images appear</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Padding</td>
+                        <td>Clears an area around the content. The padding is transparent</td>
+                    </tr>
+
+                    <tr>
+                        <td>Border</td>        
+                        <td>A border that goes around the padding and content</td>     
+                    </tr>
+
+                    <tr>
+                        <td>Margin</td>        
+                        <td>Clears an area outside the border. The margin is transparent</td>     
+                    </tr>
+            
+                </tbody>
+            </table>
+
+            <h2>Types of Boxes</h2>
+            <p>In CSS we have several types of boxes that generally fit into the categories of block boxes and inline boxes. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an inner display type and an outer display type.</p>
+
+            <table class="table two">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Description</th>
+                    </tr>                 
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="prop">block</span> </td>
+                        <td>
+                            <ul>
+                                <li>The box will break onto a new line.</li>
+                                <li>The width and height properties are respected.</li>
+                                <li>Padding, margin and border will cause other elements to be pushed away from the box.</li>
+                                <li>If width is not specified, the box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.</li>
+                            </ul>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="prop">inline</span></td>
+                        <td>
+                            <ul>
+                                <li>The box will break onto a new line.</li>
+                                <li>The width and height properties are respected.</li>
+                                <li>Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.</li>
+                                <li>Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</li>
+                            </ul>
+                        </td>                    
+                    </tr>            
+                </tbody>
+            </table>
+
+        </article>
+        <aside>
+            <div class="margin box">
+                <h3>Margin</h3>
+            </div>
+            <div class="border box">
+                <h3>Border</h3>
+            </div>
+            <div class="padding box">
+                <h3>Padding</h3>
+            </div>
+            <div class="content box">
+                <h3>Content</h3>
+            </div>
+        </aside>
+    </main>
     
 </body>
 </html>
