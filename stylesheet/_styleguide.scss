@@ -1,0 +1,204 @@
+body{
+    background-color: #f2f2f2;
+}
+
+main{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px auto;
+    width: 90%;
+    .typography, .color-palette{
+        width: 100%;
+        padding: 10px 10px;
+        background-color: #fff;
+        margin: 0 0 20px 0;
+    }
+    .typography{
+        h3{
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        .mainfonthead{
+            display: flex;
+            width: 100%;
+            border-radius: 6px;
+            background-color: #f2f2f2;
+            margin: 20px auto;
+            padding: 20px 10px;
+            .small{
+                width: 90%;
+                h3{
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 0.8em;
+                }
+            }
+            .big{
+                width: 50%;
+                h2{
+                    font-size: 3em;
+                }
+            }
+        }
+
+        .type-layout{
+            display: flex;
+            flex-flow: column wrap;
+            .content{
+                display: flex;
+                h5{
+                    width: 20%;
+                    margin-top: 1px;
+                    
+
+                }
+                p{
+                    
+                    max-width: 50%;
+                }
+                .h700{
+                    font-weight: 700;
+                }
+                .h600{
+                    font-weight: 600;
+                }
+                .h00{
+                    font-weight: 500;
+                }
+                .body-l, .body-m, .body-s{
+                    font-size: 0.9em;
+                    max-width: 60%;
+                    margin-bottom: 20px;
+                    
+                }
+                .body-m{
+                    font-size: 0.8em;
+                    max-width: 52%;
+                    
+                }
+                .body-s{
+                    font-size: 0.7em;
+                    max-width: 49%;
+                }
+                
+               
+
+            }
+        }
+        
+
+    }
+    .color-palette{
+        display: flex;
+        flex-flow: column wrap;
+        margin: 20px auto;
+        padding: 20px 10px;
+        
+        h3{
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        h4{
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        .theme{
+            .circles{
+                display: flex;
+                width: 100%;
+                flex-flow: row wrap;
+                
+                div{
+                    margin: 0 2px;
+                    padding: 10px;
+                    border-radius: 4px;
+                    text-align: center;
+                }
+                .white{
+                    width: 60%;
+                    border: 1px solid grey;
+                    background-color: #fff;
+                    
+                    
+                }
+                .primary{
+                    width: 20%;
+                    border: 1px solid grey;
+                    background-color: $priColor;
+                    color: rgb(0,0,0,0.6);
+                }
+                .secondary{
+                    width: 15%;
+                    border: 1px solid grey;
+                    background-color: $secColor;
+                    color: #fff;
+                }
+            }
+        }
+        .brand{
+            .color, .text{
+                display: flex;
+                flex-flow: row wrap;
+                
+            }
+            .color{
+                div{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+                    margin: 10px 0;
+                }
+                .primary{
+                    background: $priColor;
+                    font-size: 0.6em;
+                    
+                }
+                .secondary{
+                    background: $secColor;
+                    margin-left: -5px;
+                }
+                .tertiary{
+                    background: $auxColor;
+                    margin-left: -5px;
+                }
+                .auxiliary{
+                    background: rgb(0,0,0);
+                    margin-left: -5px;
+                }
+            }
+            .text{
+                h6{
+                    margin: 0 9px 0 30px;
+                }
+                span{
+                    display: block;
+                }
+                
+            }
+
+        }
+
+    }
+    
+}
+
+
+
+@media (min-width: 992px) {
+    main{
+        display: flex;
+        flex-flow: row wrap;
+        .typography, .color-palette{
+            width: 48%;
+            padding: 10px 10px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+    }
+    
+    
+}

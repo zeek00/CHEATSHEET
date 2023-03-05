@@ -1,65 +1,173 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-.htmltags {
-  font-family: "Lucida Console", Courier, monospace;
-}
-
-body {
-  background-color: #eca0ff;
-  height: auto;
-}
-
 header {
   background-color: #84ffc9;
   text-align: center;
   padding: 20px 20px;
   color: rgba(0, 0, 0, 0.6);
 }
-
-main article {
-  background-color: #aab2ff;
+header nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: center;
+  margin: 10px 0 auto;
 }
-main article p {
-  font-size: 1.3em;
+header nav ul li {
+  padding: 0 10px;
+}
+header nav ul li:nth-child(odd) {
+  border-right: 2px solid rgba(0, 0, 0, 0.6);
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+header nav ul li a:hover {
+  color: #eca0ff;
+  font-weight: 600;
+}
+
+.box-model aside {
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box-model aside h3 {
+  font-size: 1em;
+  font-weight: 600;
+}
+.box-model aside .box {
+  position: absolute;
+  width: 80%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.box-model aside .margin {
+  background-color: rgba(170, 217, 217, 0.7);
+}
+.box-model aside .border {
+  background-color: rgb(132, 255, 201);
+  width: 70%;
+  height: 160px;
+  margin: 20px auto;
+}
+.box-model aside .padding {
+  background-color: rgba(170, 217, 217, 0.7);
+  width: 60%;
+  height: 120px;
+  margin: 40px auto;
+}
+.box-model aside .content {
+  background-color: #fff;
+  width: 50%;
+  height: 90px;
+  margin: 60px auto;
+}
+@media (min-width: 992px) {
+  .box-model aside {
+    display: block;
+    width: 450px;
+    height: 190px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-weight: lighter;
+    top: 20px;
+    margin-bottom: 30px;
+    left: 0;
+    padding: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .box-model .box {
+    position: absolute;
+    width: 80%;
+    height: 180px;
+    margin: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .box-model .margin {
+    height: 100px;
+  }
+  .box-model .border {
+    background-color: rgb(132, 255, 201);
+    width: 70%;
+    height: 120px;
+    margin: 20px auto;
+  }
+  .box-model .padding {
+    background-color: rgba(170, 217, 217, 0.7);
+    width: 60%;
+    height: 100px;
+    margin: 40px auto;
+  }
+  .box-model .content {
+    background-color: #fff;
+    width: 50%;
+    height: 70px;
+    margin: 60px auto;
+  }
+}
+.box-model article {
+  position: relative;
+  top: 230px;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .box-model article {
+    top: 0;
+  }
+}
+.box-model article p {
+  font-size: 0.9em;
   padding: 10px;
   color: rgba(0, 0, 0, 0.8);
-  text-align: justify;
 }
-main article h2 {
+.box-model article h2 {
   background-color: #eca0ff;
   color: rgba(0, 0, 0, 0.6);
   margin: 20px 0 auto;
-  font-size: 1.3em;
+  font-size: 0.9em;
   text-align: center;
   border: 2px solid rgba(0, 0, 0, 0.3);
   font-weight: 600;
 }
-main article table {
-  width: 70%;
+.box-model article table {
+  font-size: 0.9em;
   border-collapse: collapse;
   border: 1px solid grey;
   margin: 10px auto;
   background-color: rgba(170, 217, 217, 0.7);
 }
-main article th {
+.box-model article table .one {
+  width: 100%;
+}
+.box-model article table .two {
+  width: 100%;
+}
+.box-model article table th {
   background-color: #eca0ff;
   border: 2px solid rgba(0, 0, 0, 0.3);
   padding: 6px;
   color: rgba(0, 0, 0, 0.6);
 }
-main article td {
+.box-model article table td {
   padding: 6px;
   text-align: justify;
+  font-size: 0.9em;
   background-color: #aab2ff;
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.9);
 }
-main article .prop {
+.box-model article table .prop {
   font-family: "Lucida Console", Courier, monospace;
   background-color: rgb(52, 52, 52);
   color: #84ffc9;
@@ -70,74 +178,205 @@ main article .prop {
   padding: 5px;
   border-radius: 20px;
 }
-main article ul {
+.box-model article table ul {
   padding-left: 17px;
 }
-main article li {
+.box-model article table li {
   padding: 10px 0;
 }
 @media (min-width: 992px) {
-  main article {
-    width: 50%;
+  .box-model article {
+    width: 100%;
     height: auto;
-    display: inline-block;
-    border-right: 2px dashed grey;
+    margin: 0 auto;
+    border: none;
+    background-color: transparent;
+    border-right: none;
+  }
+  .box-model article .two {
+    width: 100%;
+  }
+  .box-model article h2 {
+    margin: 30px auto;
   }
 }
 
-aside {
-  position: absolute;
-  border: 2px dashed grey;
-  display: inline-block;
-  width: 500px;
-  height: 350px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: lighter;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-@media (min-width: 992px) {
-  aside {
-    top: 150px;
-    left: auto;
-    right: 120px;
-  }
+body {
+  background-color: #f2f2f2;
 }
 
-.box {
-  position: absolute;
-  width: auto;
-  height: inherit;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+main {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px auto;
+  width: 90%;
+}
+main .typography, main .color-palette {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #fff;
+  margin: 0 0 20px 0;
+}
+main .typography h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+main .typography .mainfonthead {
+  display: flex;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  margin: 20px auto;
+  padding: 20px 10px;
+}
+main .typography .mainfonthead .small {
+  width: 90%;
+}
+main .typography .mainfonthead .small h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .typography .mainfonthead .small p {
+  font-weight: 400;
+  font-size: 0.8em;
+}
+main .typography .mainfonthead .big {
+  width: 50%;
+}
+main .typography .mainfonthead .big h2 {
+  font-size: 3em;
+}
+main .typography .type-layout {
+  display: flex;
+  flex-flow: column wrap;
+}
+main .typography .type-layout .content {
+  display: flex;
+}
+main .typography .type-layout .content h5 {
+  width: 20%;
+  margin-top: 1px;
+}
+main .typography .type-layout .content p {
+  max-width: 50%;
+}
+main .typography .type-layout .content .h700 {
+  font-weight: 700;
+}
+main .typography .type-layout .content .h600 {
+  font-weight: 600;
+}
+main .typography .type-layout .content .h00 {
+  font-weight: 500;
+}
+main .typography .type-layout .content .body-l, main .typography .type-layout .content .body-m, main .typography .type-layout .content .body-s {
+  font-size: 0.9em;
+  max-width: 60%;
+  margin-bottom: 20px;
+}
+main .typography .type-layout .content .body-m {
+  font-size: 0.8em;
+  max-width: 52%;
+}
+main .typography .type-layout .content .body-s {
+  font-size: 0.7em;
+  max-width: 49%;
+}
+main .color-palette {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px auto;
+  padding: 20px 10px;
+}
+main .color-palette h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+main .color-palette h4 {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+main .color-palette .theme .circles {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+main .color-palette .theme .circles div {
+  margin: 0 2px;
+  padding: 10px;
+  border-radius: 4px;
   text-align: center;
 }
-
-.margin {
-  background-color: rgba(170, 217, 217, 0.7);
-}
-
-.border {
-  background-color: rgb(132, 255, 201);
-  width: 400px;
-  height: 270px;
-  margin: 40px auto;
-}
-
-.padding {
-  background-color: rgba(170, 217, 217, 0.7);
-  width: 300px;
-  height: 190px;
-  margin: 80px auto;
-}
-
-.content {
+main .color-palette .theme .circles .white {
+  width: 60%;
+  border: 1px solid grey;
   background-color: #fff;
-  width: 200px;
-  height: 110px;
-  margin: 120px auto;
+}
+main .color-palette .theme .circles .primary {
+  width: 20%;
+  border: 1px solid grey;
+  background-color: #84ffc9;
+  color: rgba(0, 0, 0, 0.6);
+}
+main .color-palette .theme .circles .secondary {
+  width: 15%;
+  border: 1px solid grey;
+  background-color: #eca0ff;
+  color: #fff;
+}
+main .color-palette .brand .color, main .color-palette .brand .text {
+  display: flex;
+  flex-flow: row wrap;
+}
+main .color-palette .brand .color div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin: 10px 0;
+}
+main .color-palette .brand .color .primary {
+  background: #84ffc9;
+  font-size: 0.6em;
+}
+main .color-palette .brand .color .secondary {
+  background: #eca0ff;
+  margin-left: -5px;
+}
+main .color-palette .brand .color .tertiary {
+  background: #aab2ff;
+  margin-left: -5px;
+}
+main .color-palette .brand .color .auxiliary {
+  background: rgb(0, 0, 0);
+  margin-left: -5px;
+}
+main .color-palette .brand .text h6 {
+  margin: 0 9px 0 30px;
+}
+main .color-palette .brand .text span {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  main .typography, main .color-palette {
+    width: 48%;
+    padding: 10px 10px;
+    background-color: #fff;
+    margin: 20px auto;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.htmltags {
+  font-family: "Lucida Console", Courier, monospace;
 }/*# sourceMappingURL=styles.css.map */

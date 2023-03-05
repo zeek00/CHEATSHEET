@@ -1,0 +1,31 @@
+header{
+    background-color: $priColor;
+    text-align: center;
+    padding: 20px 20px;
+    color: rgb(0,0,0,0.6);
+
+    nav ul{
+        display: flex;
+        flex-flow: row wrap;
+        list-style-type: none;
+        justify-content: center;
+        margin: 10px 0 auto;
+        li{
+            padding: 0 10px;
+        }
+        li:nth-child(odd){
+            border-right: 2px solid rgb(0,0,0,0.6);
+            
+        }
+        li a{
+            text-decoration: none;
+            color: rgb(0,0,0,0.6);
+        }
+        li a:hover{
+            color: $secColor;
+            font-weight: 600;
+
+        }
+        
+    }
+}

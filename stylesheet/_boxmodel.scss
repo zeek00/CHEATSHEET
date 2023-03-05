@@ -1,0 +1,194 @@
+.box-model{
+    
+    aside{
+        padding-top: 50px;
+        position: relative;
+        width: 100%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: lighter;
+        margin-left: auto;
+        margin-right: auto;
+        h3{
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .box{
+            position: absolute;
+            width: 80%;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        .margin{
+            background-color: rgb(170,217,217,0.7);
+        }
+        .border{
+            background-color: rgb(132,255,201,);
+            width: 70%;
+            height: 160px;
+            margin: 20px auto;
+        }
+        
+        .padding{
+            background-color: rgb(170,217,217,0.7);
+            width: 60%;
+            height: 120px;
+            margin: 40px auto;
+        }
+        
+        .content{
+            background-color: #fff;
+            width: 50%;
+            height: 90px;
+            margin: 60px auto;
+            
+        }
+    } 
+    @media (min-width: 992px){
+        aside{
+            display: block;
+            width: 450px;
+            height: 190px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: lighter;
+            top: 20px;
+            margin-bottom: 30px;
+            left: 0;
+            padding: 0;
+            right: 0;
+            margin-left: auto; 
+            margin-right: auto;  
+        }
+        .box{
+            position: absolute;
+            width: 80%;
+            height: 180px;
+            margin: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        .margin{
+            height: 100px;
+        }
+        .border{
+            background-color: rgb(132,255,201,);
+            width: 70%;
+            height: 120px;
+            margin: 20px auto;
+        }
+        
+        .padding{
+            background-color: rgb(170,217,217,0.7);
+            width: 60%;
+            height: 100px;
+            margin: 40px auto;
+        }
+        
+        .content{
+            background-color: #fff;
+            width: 50%;
+            height: 70px;
+            margin: 60px auto;
+            
+        }
+       
+       
+        
+    }
+    article{
+        position: relative;
+        top: 230px;
+        height: auto;
+        @media (min-width: 992px) {
+            top: 0;
+           
+        }
+        p{
+            font-size: 0.9em;
+            padding: 10px;
+            color: rgb(0,0,0,0.8);
+            
+        }
+        h2{
+            background-color: $secColor;
+            color: rgb(0,0,0,0.6);
+            margin: 20px  0 auto;
+            font-size: 0.9em;
+            text-align: center;
+            border: 2px solid rgb(0,0,0,0.3);
+            font-weight: 600;
+        }
+        table{
+            font-size: 0.9em;
+            border-collapse: collapse;
+            border: 1px solid grey;
+            margin: 10px auto;
+            background-color: rgb(170,217,217,0.7);
+            .one{
+                width: 100%;
+            }
+            .two{
+                width: 100%;
+            }
+            th{
+                background-color: $secColor;
+                border: 2px solid rgb(0,0,0,0.3);
+                padding: 6px;
+                color: rgb(0,0,0,0.6);
+            }
+            td{
+                padding: 6px;
+                text-align: justify;
+                font-size: 0.9em;
+                background-color: $auxColor;
+                border: 2px solid rgb(0,0,0,0.3);
+                color: rgb(0,0,0,0.9);
+            }
+            .prop{
+                font-family: "Lucida Console", Courier, monospace;
+                background-color: rgb(52,52,52);
+                color: $priColor;
+                font-size: 0.8em;
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                padding: 5px;
+                border-radius: 20px;
+    
+            }
+            ul{
+                padding-left: 17px;
+            }
+            li{
+                padding: 10px 0;
+            }
+        }
+        @media (min-width: 992px ) {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border: none;
+        background-color: transparent;
+        border-right: none;
+        .two{
+            width: 100%;
+        }
+        h2{
+            margin: 30px auto;
+        }
+        
+        
+        
+        }
+    }
+                   
+        
+        
+    
+    
+
+}
