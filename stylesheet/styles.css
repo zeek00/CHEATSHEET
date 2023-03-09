@@ -325,15 +325,25 @@ main .color-palette .theme .circles .secondary {
   color: #fff;
 }
 main .color-palette .brand .color, main .color-palette .brand .text {
-  display: flex;
+  display: inline-flex;
   flex-flow: row wrap;
 }
+main .color-palette .brand .color .first-color, main .color-palette .brand .color .second-color, main .color-palette .brand .color .third-color, main .color-palette .brand .color .fourth-color {
+  margin: 10px auto 25px auto;
+}
 main .color-palette .brand .color div {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 3px solid #fff;
-  margin: 10px 0;
+}
+main .color-palette .brand .color div h6 {
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+main .color-palette .brand .color div span {
+  display: block;
 }
 main .color-palette .brand .color .primary {
   background: #84ffc9;
@@ -341,23 +351,29 @@ main .color-palette .brand .color .primary {
 }
 main .color-palette .brand .color .secondary {
   background: #eca0ff;
-  margin-left: -5px;
 }
 main .color-palette .brand .color .tertiary {
   background: #aab2ff;
-  margin-left: -5px;
 }
 main .color-palette .brand .color .auxiliary {
   background: rgb(0, 0, 0);
-  margin-left: -5px;
-}
-main .color-palette .brand .text h6 {
-  margin: 0 9px 0 30px;
-}
-main .color-palette .brand .text span {
-  display: block;
 }
 
+@media only screen and (min-width: 600px) {
+  main .color-palette .brand .color {
+    display: inline-flex;
+  }
+  main .color-palette .brand .color div {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .color-palette .brand .color div {
+    width: 100px;
+    height: 100px;
+  }
+}
 @media (min-width: 992px) {
   main {
     display: flex;
@@ -368,6 +384,41 @@ main .color-palette .brand .text span {
     padding: 10px 10px;
     background-color: #fff;
     margin: 20px auto;
+  }
+  main .color-palette .theme {
+    margin: 20px 0;
+  }
+  main .color-palette .theme h4 {
+    margin-bottom: 10px;
+  }
+  main .color-palette .theme .color div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin: 10px 0;
+  }
+  main .color-palette .theme .color .primary {
+    background: #84ffc9;
+    font-size: 0.6em;
+  }
+  main .color-palette .theme .color .secondary {
+    background: #eca0ff;
+    margin-left: -5px;
+  }
+  main .color-palette .theme .color .tertiary {
+    background: #aab2ff;
+    margin-left: -5px;
+  }
+  main .color-palette .theme .color .auxiliary {
+    background: rgb(0, 0, 0);
+    margin-left: -5px;
+  }
+  main .color-palette .theme .text h6 {
+    margin: 0 9px 0 30px;
+  }
+  main .color-palette .theme .text span {
+    display: block;
   }
 }
 * {

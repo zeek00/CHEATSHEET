@@ -140,18 +140,32 @@ main{
         }
         .brand{
             .color, .text{
-                display: flex;
+                display: inline-flex;
                 flex-flow: row wrap;
                 
             }
             .color{
-                div{
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
-                    border: 3px solid #fff;
-                    margin: 10px 0;
+                .first-color,.second-color,.third-color,.fourth-color{
+                    margin: 10px auto 25px auto;
                 }
+                div{
+                    width: 140px;
+                    height: 140px;
+                    border-radius: 50%;
+                    
+                    h6{
+                        margin-top: 5px;
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                        
+                    }
+                    span{
+                        display: block;
+                    }
+                   
+                }
+                
                 .primary{
                     background: $priColor;
                     font-size: 0.6em;
@@ -159,29 +173,58 @@ main{
                 }
                 .secondary{
                     background: $secColor;
-                    margin-left: -5px;
+                    
                 }
                 .tertiary{
                     background: $auxColor;
-                    margin-left: -5px;
+                    
                 }
                 .auxiliary{
                     background: rgb(0,0,0);
-                    margin-left: -5px;
+                    
                 }
             }
-            .text{
-                h6{
-                    margin: 0 9px 0 30px;
-                }
-                span{
-                    display: block;
-                }
-                
-            }
+            
 
         }
 
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    main{
+        .color-palette{
+            .brand{
+                .color{
+                    display: inline-flex;
+                    div{
+                        width: 130px;
+                        height: 130px;
+                    }
+                }
+            }    
+
+        }
+       
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    main{
+        .color-palette{
+            .brand{
+                .color{
+                    div{
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }    
+
+        }
+       
     }
     
 }
@@ -197,6 +240,50 @@ main{
             padding: 10px 10px;
             background-color: #fff;
             margin: 20px auto;
+        }
+        .color-palette{
+            .theme{
+                margin: 20px 0;
+                h4{
+                    margin-bottom: 10px;
+                }
+                .color{
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        border: 3px solid #fff;
+                        margin: 10px 0;
+                    }
+                    .primary{
+                        background: $priColor;
+                        font-size: 0.6em;
+                        
+                    }
+                    .secondary{
+                        background: $secColor;
+                        margin-left: -5px;
+                    }
+                    .tertiary{
+                        background: $auxColor;
+                        margin-left: -5px;
+                    }
+                    .auxiliary{
+                        background: rgb(0,0,0);
+                        margin-left: -5px;
+                    }
+                }
+                .text{
+                    h6{
+                        margin: 0 9px 0 30px;
+                    }
+                    span{
+                        display: block;
+                    }
+                    
+                }
+
+            }
         }
     }
     
